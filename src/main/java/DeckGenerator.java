@@ -3,10 +3,22 @@ import java.util.Arrays;
 
 public class DeckGenerator {
 
-//    ArrayList<String> cardSuits = new ArrayList<>(Arrays.asList("spades", "hearts", "clubs", "diamonds"));
-//    ArrayList<String> cardRanks = new ArrayList<>(Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"));
-//
-//
-//    public ArrayList<Card>
+    ArrayList<String> cardSuits = new ArrayList<>(Arrays.asList("spades", "hearts", "clubs", "diamonds"));
+    ArrayList<String> cardRanks = new ArrayList<>(Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"));
+
+
+    public ArrayList<Card> generateDeck(){
+
+        ArrayList<Card> entireDeck = new ArrayList<>();
+
+        for(String suit: cardSuits){
+            for(String rank: cardRanks){
+                entireDeck.add(new Card(rank, suit));
+            }
+        }
+
+        System.out.println(entireDeck.toString());
+        return entireDeck;
+    }
 
 }
