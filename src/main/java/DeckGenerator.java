@@ -16,8 +16,6 @@ public class DeckGenerator {
                 entireDeck.add(new Card(rank, suit));
             }
         }
-
-        System.out.println(entireDeck.toString());
         return entireDeck;
     }
 

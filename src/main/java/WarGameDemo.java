@@ -4,9 +4,16 @@ public class WarGameDemo {
 
     public static void main(String[] args){
 
+        Player playerOne = new Player("Brian");
+        Player playerComputer = new Player("computer");
+
         DeckGenerator deckGenerator = new DeckGenerator();
+        CardDealer cardDealer = new CardDealer();
+
         ArrayList<Card> entireDeck = deckGenerator.generateDeck();
-        System.out.println(entireDeck.size());
+        cardDealer.dealDeck(entireDeck, playerOne, playerComputer);
+
+
 
 
     }
